@@ -34,6 +34,21 @@
 <h2>Challenge 4 - Display a list of users along with their age</h2>
 {{! Edit below this line}}
 
+<ul>
+    {{#each users}}
+    <li>{{name }} {{ age yearOfBirth }}</li>
+    {{/each}}
+</ul>
+
 
 <h2>Challenge 5 - Display a list of users who are logged in or a label 'Log In' if the user is not logged in.</h2>
 {{! Edit below this line}}
+<ul>
+    {{#each users}}
+    {{#if loggedIn}}
+    <li>{{ name }}</li>
+    {{else}}
+    <li>Log in!</li>
+    {{/if}}
+    {{/each}}
+</ul>
